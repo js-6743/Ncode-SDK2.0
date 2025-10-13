@@ -1,0 +1,21 @@
+# Build artifacts
+x64/
+Release/
+Debug/
+build/
+*.exe
+*.dll
+*.pdb
+*.obj
+*.lib
+*.log
+
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Do NOT commit pattern PDFs/images
+Ncode paper/
+*.pdf
+*.png

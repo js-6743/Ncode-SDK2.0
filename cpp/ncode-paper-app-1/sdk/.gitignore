@@ -201,20 +201,3 @@ FakesAssemblies/
 # Custom ignores
 gallery.xml
 project.lock.json
-# Build artifacts
-**/x64/
-**/Release/
-**/Debug/
-**/build/
-*.exe
-*.dll
-*.pdb
-*.obj
-*.lib
-*.log
-# VS
-.vs/
-*.user
-*.suo
-# Generated
-*.png
