@@ -10,7 +10,7 @@
 # User-specific files (MonoDevelop/Xamarin Studio)
 *.userprefs
 
-# Build results
+# Build results - BUT see exception for Release folder at bottom
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/
@@ -201,39 +201,27 @@ FakesAssemblies/
 # Custom ignores
 gallery.xml
 project.lock.json
-# Build artifacts
-**/x64/
-**/Release/
-**/Debug/
-**/build/
-*.exe
-*.dll
-*.pdb
-*.obj
-*.lib
-*.log
-# VS
+
+# ============================================
+# EXCEPTION: Include entire Release folder
+# ============================================
+# Un-ignore the entire x64/Release folder and all its contents
+!x64/
+!x64/Release/
+!x64/Release/**
+
+# Override previous ignore rules for Release folder
+!x64/Release/**/*.exe
+!x64/Release/**/*.dll
+!x64/Release/**/*.pdb
+!x64/Release/**/*.obj
+!x64/Release/**/*.lib
+!x64/Release/**/*.log
+!x64/Release/**/*.png
+!x64/Release/**/*.pdf
+!x64/Release/**/*
+
+# Still ignore .vs/ and .user files everywhere
 .vs/
 *.user
 *.suo
-# Generated
-*.png
-
-# ============================================
-# EXCEPTIONS: Include Ncode paper folder
-# ============================================
-# Un-ignore the Ncode paper folder in x64/Release
-!x64/Release/Ncode paper/
-!x64/Release/Ncode paper/**
-
-# Un-ignore PDFs in Ncode paper folder
-!x64/Release/Ncode paper/**/*.pdf
-
-# If you also want to include it in Debug build:
-!x64/Debug/Ncode paper/
-!x64/Debug/Ncode paper/**
-!x64/Debug/Ncode paper/**/*.pdf
-
-# Un-ignore PNGs in Ncode paper folder (if needed)
-!x64/Release/Ncode paper/**/*.png
-!x64/Debug/Ncode paper/**/*.png
