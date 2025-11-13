@@ -201,39 +201,26 @@ FakesAssemblies/
 # Custom ignores
 gallery.xml
 project.lock.json
-# Build artifacts
-**/x64/
-**/Release/
-**/Debug/
-**/build/
-*.exe
-*.dll
-*.pdb
-*.obj
-*.lib
-*.log
-# VS
+
+# ============================================
+# EXCEPTION: Include ncode-paper-app-3 Release folder
+# ============================================
+# Un-ignore the entire Release folder for ncode-paper-app-3 only
+!cpp/ncode-paper-app-3/x64/
+!cpp/ncode-paper-app-3/x64/Release/
+!cpp/ncode-paper-app-3/x64/Release/**
+
+# Override specific file type ignores for this folder
+!cpp/ncode-paper-app-3/x64/Release/**/*.exe
+!cpp/ncode-paper-app-3/x64/Release/**/*.dll
+!cpp/ncode-paper-app-3/x64/Release/**/*.pdb
+!cpp/ncode-paper-app-3/x64/Release/**/*.obj
+!cpp/ncode-paper-app-3/x64/Release/**/*.lib
+!cpp/ncode-paper-app-3/x64/Release/**/*.log
+!cpp/ncode-paper-app-3/x64/Release/**/*.png
+!cpp/ncode-paper-app-3/x64/Release/**/*.pdf
+!cpp/ncode-paper-app-3/x64/Release/**/*.md
+!cpp/ncode-paper-app-3/x64/Release/**/*
+
+# Still keep .vs/ and .user files ignored everywhere
 .vs/
-*.user
-*.suo
-# Generated
-*.png
-
-# ============================================
-# EXCEPTIONS: Include Ncode paper folder
-# ============================================
-# Un-ignore the Ncode paper folder in x64/Release
-!x64/Release/Ncode paper/
-!x64/Release/Ncode paper/**
-
-# Un-ignore PDFs in Ncode paper folder
-!x64/Release/Ncode paper/**/*.pdf
-
-# If you also want to include it in Debug build:
-!x64/Debug/Ncode paper/
-!x64/Debug/Ncode paper/**
-!x64/Debug/Ncode paper/**/*.pdf
-
-# Un-ignore PNGs in Ncode paper folder (if needed)
-!x64/Release/Ncode paper/**/*.png
-!x64/Debug/Ncode paper/**/*.png
